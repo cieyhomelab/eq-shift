@@ -256,24 +256,24 @@ Not applicable — greenfield feature, no existing data or prior behavior to mig
 
 #### Automated
 
-- [x] 1.1 Type checking passes: `npm run build`
-- [x] 1.2 Linting passes: `npm run lint`
-- [x] 1.3 Domain unit tests pass: `npx vitest run`
+- [x] 1.1 Type checking passes: `npm run build` — 277cb24
+- [x] 1.2 Linting passes: `npm run lint` — 277cb24
+- [x] 1.3 Domain unit tests pass: `npx vitest run` — 277cb24
 
 ### Phase 2: Interactive Equation Board
 
 #### Automated
 
-- [ ] 2.1 Type checking passes: `npm run build`
-- [ ] 2.2 Linting passes: `npm run lint`
+- [x] 2.1 Type checking passes: `npm run build`
+- [x] 2.2 Linting passes: `npm run lint`
 
 #### Manual
 
-- [ ] 2.3 First puzzle renders as recognizable lit/unlit digit and operator shapes
-- [ ] 2.4 Clicking a lit segment selects/deselects it correctly
-- [ ] 2.5 Clicking an unlit segment while one is selected moves it and clears selection
-- [ ] 2.6 Clicking an unlit segment with nothing selected has no effect
-- [ ] 2.7 `=` glyph is always visible and never clickable
+- [x] 2.3 First puzzle renders as recognizable lit/unlit digit and operator shapes
+- [x] 2.4 Clicking a lit segment selects/deselects it correctly
+- [x] 2.5 Clicking an unlit segment while one is selected moves it and clears selection
+- [x] 2.6 Clicking an unlit segment with nothing selected has no effect
+- [x] 2.7 `=` glyph is always visible and never clickable
 
 ### Phase 3: Win Loop & Puzzle Cycling
 
