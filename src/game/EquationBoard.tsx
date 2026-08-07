@@ -21,9 +21,10 @@ type DigitCellKey = 'left' | 'right' | 'result'
 type EquationBoardProps = {
   state: EquationState
   onMove: (from: SlotRef, to: SlotRef) => void
+  disabled?: boolean
 }
 
-export function EquationBoard({ state, onMove }: EquationBoardProps) {
+export function EquationBoard({ state, onMove, disabled = false }: EquationBoardProps) {
   const [selected, setSelected] = useState<SlotRef | null>(null)
 
   function isSelected(cell: CellKey, slot: DigitSlot | OperatorSlot) {
@@ -31,6 +32,7 @@ export function EquationBoard({ state, onMove }: EquationBoardProps) {
   }
 
   function handleSlotClick(ref: SlotRef, lit: boolean) {
+    if (disabled) return
     if (lit) {
       setSelected((current) =>
         current && current.cell === ref.cell && current.slot === ref.slot ? null : ref,

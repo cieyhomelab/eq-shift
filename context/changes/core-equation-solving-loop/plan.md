@@ -205,7 +205,7 @@ Add automatic validation after every move: a correct move plays a brief reward a
 
 #### Manual Verification:
 
-- Performing puzzle 1's solving move (`5+1=8` → operator vertical segment to right digit's topRight) triggers the reward, then the board advances to puzzle 2 (`3+6=3`)
+- Performing puzzle 1's solving move (`5+1=8` → operator vertical segment to left digit's topRight) triggers the reward, then the board advances to puzzle 2 (`3+6=3`)
 - Solving puzzle 2 advances to puzzle 3 (`6-3=9`); solving puzzle 3 loops back to puzzle 1
 - Making an incorrect move produces no message, banner, or reversion — the segment simply relocates and the player can try again
 - The board visibly updates within ~100ms of a click, with no perceptible input lag
@@ -229,7 +229,7 @@ Add automatic validation after every move: a correct move plays a brief reward a
 ### Manual Testing Steps:
 
 1. Load the app; confirm puzzle 1 (`5+1=8`) renders with recognizable digit/operator segment shapes.
-2. Select the operator's vertical segment, place it on the right digit's top-right slot; confirm the reward plays and puzzle 2 loads.
+2. Select the operator's vertical segment, place it on the left digit's top-right slot; confirm the reward plays and puzzle 2 loads.
 3. On puzzle 2, make an incorrect move (any lit segment to any unlit slot other than the solving move); confirm nothing happens beyond the segment moving.
 4. Solve puzzles 2 and 3 in order; confirm the cycle loops back to puzzle 1 after puzzle 3.
 

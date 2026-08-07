@@ -30,7 +30,7 @@ function App() {
 
   return (
     <main className="app">
-      <EquationBoard state={state} onMove={handleMove} />
+      <EquationBoard state={state} onMove={handleMove} disabled={solved} />
       <RewardBanner visible={solved} />
     </main>
   )
