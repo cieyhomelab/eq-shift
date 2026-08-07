@@ -111,3 +111,12 @@
 .equals-bar--bottom {
   top: 46px;
 }
+
+.reward-banner {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #39ff6a;
+  text-shadow: 0 0 8px #39ff6a;
+}

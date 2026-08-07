@@ -264,27 +264,27 @@ Not applicable — greenfield feature, no existing data or prior behavior to mig
 
 #### Automated
 
-- [x] 2.1 Type checking passes: `npm run build`
-- [x] 2.2 Linting passes: `npm run lint`
+- [x] 2.1 Type checking passes: `npm run build` — 5355ccf
+- [x] 2.2 Linting passes: `npm run lint` — 5355ccf
 
 #### Manual
 
-- [x] 2.3 First puzzle renders as recognizable lit/unlit digit and operator shapes
-- [x] 2.4 Clicking a lit segment selects/deselects it correctly
-- [x] 2.5 Clicking an unlit segment while one is selected moves it and clears selection
-- [x] 2.6 Clicking an unlit segment with nothing selected has no effect
-- [x] 2.7 `=` glyph is always visible and never clickable
+- [x] 2.3 First puzzle renders as recognizable lit/unlit digit and operator shapes — 5355ccf
+- [x] 2.4 Clicking a lit segment selects/deselects it correctly — 5355ccf
+- [x] 2.5 Clicking an unlit segment while one is selected moves it and clears selection — 5355ccf
+- [x] 2.6 Clicking an unlit segment with nothing selected has no effect — 5355ccf
+- [x] 2.7 `=` glyph is always visible and never clickable — 5355ccf
 
 ### Phase 3: Win Loop & Puzzle Cycling
 
 #### Automated
 
-- [ ] 3.1 Type checking passes: `npm run build`
-- [ ] 3.2 Linting passes: `npm run lint`
+- [x] 3.1 Type checking passes: `npm run build`
+- [x] 3.2 Linting passes: `npm run lint`
 
 #### Manual
 
-- [ ] 3.3 Solving puzzle 1 triggers reward and advances to puzzle 2
-- [ ] 3.4 Solving puzzles 2 and 3 in order loops back to puzzle 1 after puzzle 3
-- [ ] 3.5 An incorrect move produces no message/reversion, segment just relocates
-- [ ] 3.6 Board updates within ~100ms of a click with no perceptible lag
+- [x] 3.3 Solving puzzle 1 triggers reward and advances to puzzle 2
+- [x] 3.4 Solving puzzles 2 and 3 in order loops back to puzzle 1 after puzzle 3
+- [x] 3.5 An incorrect move produces no message/reversion, segment just relocates
+- [x] 3.6 Board updates within ~100ms of a click with no perceptible lag
