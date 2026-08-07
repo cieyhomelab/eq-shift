@@ -279,12 +279,12 @@ Not applicable — greenfield feature, no existing data or prior behavior to mig
 
 #### Automated
 
-- [x] 3.1 Type checking passes: `npm run build`
-- [x] 3.2 Linting passes: `npm run lint`
+- [x] 3.1 Type checking passes: `npm run build` — 64648e7
+- [x] 3.2 Linting passes: `npm run lint` — 64648e7
 
 #### Manual
 
-- [x] 3.3 Solving puzzle 1 triggers reward and advances to puzzle 2
-- [x] 3.4 Solving puzzles 2 and 3 in order loops back to puzzle 1 after puzzle 3
-- [x] 3.5 An incorrect move produces no message/reversion, segment just relocates
-- [x] 3.6 Board updates within ~100ms of a click with no perceptible lag
+- [x] 3.3 Solving puzzle 1 triggers reward and advances to puzzle 2 — 64648e7
+- [x] 3.4 Solving puzzles 2 and 3 in order loops back to puzzle 1 after puzzle 3 — 64648e7
+- [x] 3.5 An incorrect move produces no message/reversion, segment just relocates — 64648e7
+- [x] 3.6 Board updates within ~100ms of a click with no perceptible lag — 64648e7
