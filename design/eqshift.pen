@@ -6,13 +6,790 @@
       "id": "bi8Au",
       "x": 0,
       "y": 0,
-      "name": "Frame",
+      "name": "EqShift Arcade Cabinet",
       "clip": true,
-      "width": 800,
-      "height": 600,
-      "fill": "#FFFFFF",
-      "layout": "none"
+      "width": 900,
+      "fill": "$cabinet-purple",
+      "cornerRadius": 32,
+      "stroke": "$neon-cyan",
+      "strokeWidth": 3,
+      "strokeAlignment": "inner",
+      "layout": "vertical",
+      "gap": 24,
+      "padding": [
+        28,
+        28,
+        40,
+        28
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "Q6tbA",
+          "name": "Marquee",
+          "width": "fill_container",
+          "fill": "$bezel-black",
+          "cornerRadius": 14,
+          "stroke": "$neon-magenta",
+          "strokeWidth": 2,
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "$neon-magenta",
+            "blur": 24
+          },
+          "padding": [
+            22,
+            24
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Euzru",
+              "name": "Logo",
+              "fill": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 0,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "$neon-cyan",
+                    "position": 0
+                  },
+                  {
+                    "color": "$neon-magenta",
+                    "position": 1
+                  }
+                ]
+              },
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "$neon-magenta",
+                "blur": 18
+              },
+              "content": "EQ.SHIFT",
+              "fontFamily": "$font-arcade",
+              "fontSize": 46,
+              "fontWeight": "normal",
+              "letterSpacing": 2
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "D1IvT",
+          "name": "Screen Bezel",
+          "width": "fill_container",
+          "fill": "$bezel-black",
+          "cornerRadius": 16,
+          "stroke": "$metal-grey",
+          "strokeWidth": 4,
+          "strokeAlignment": "inner",
+          "layout": "vertical",
+          "padding": 30,
+          "children": [
+            {
+              "type": "frame",
+              "id": "fpS7W",
+              "name": "Screen",
+              "clip": true,
+              "width": "fill_container",
+              "fill": "$screen-bg",
+              "cornerRadius": 6,
+              "layout": "vertical",
+              "gap": 40,
+              "padding": [
+                36,
+                24
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "UWXl4",
+                  "name": "HUD",
+                  "width": "fill_container",
+                  "gap": 56,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "TlaL1",
+                      "name": "SCORE Stat",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "bSwSA",
+                          "name": "Label",
+                          "opacity": 0.6,
+                          "fill": "$lcd-green",
+                          "content": "SCORE",
+                          "fontFamily": "$font-arcade",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "HR371",
+                          "name": "Value",
+                          "fill": "$lcd-green",
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "$lcd-green",
+                            "blur": 10
+                          },
+                          "content": "007",
+                          "fontFamily": "$font-arcade",
+                          "fontSize": 26,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "vCFaB",
+                      "name": "MOVES Stat",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "zig7N",
+                          "name": "Label",
+                          "opacity": 0.6,
+                          "fill": "$lcd-green",
+                          "content": "MOVES",
+                          "fontFamily": "$font-arcade",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Ksuek",
+                          "name": "Value",
+                          "fill": "$lcd-green",
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "$lcd-green",
+                            "blur": 10
+                          },
+                          "content": "03",
+                          "fontFamily": "$font-arcade",
+                          "fontSize": 26,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xcUet",
+                      "name": "TIME Stat",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "xPIvy",
+                          "name": "Label",
+                          "opacity": 0.6,
+                          "fill": "$lcd-green",
+                          "content": "TIME",
+                          "fontFamily": "$font-arcade",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "NBp50",
+                          "name": "Value",
+                          "fill": "$lcd-green",
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "$lcd-green",
+                            "blur": 10
+                          },
+                          "content": "0:47",
+                          "fontFamily": "$font-arcade",
+                          "fontSize": 26,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "FQswL",
+                  "name": "Equation Board",
+                  "gap": 28,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "oChbM",
+                      "type": "ref",
+                      "ref": "yAjSx",
+                      "name": "Left Digit (9)",
+                      "width": 88,
+                      "height": 160,
+                      "descendants": {
+                        "OUrUO": {
+                          "fill": "$lcd-green",
+                          "opacity": 1,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "$lcd-green",
+                            "blur": 16,
+                            "spread": 1
+                          }
+                        },
+                        "D4O79q": {
+                          "fill": "$lcd-green",
+                          "opacity": 1,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "$lcd-green",
+                            "blur": 16,
+                            "spread": 1
+                          }
+                        },
+                        "TfllU": {
+                          "fill": "$lcd-green",
+                          "opacity": 1,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "$lcd-green",
+                            "blur": 16,
+                            "spread": 1
+                          }
+                        },
+                        "IifVP": {
+                          "fill": "$lcd-green",
+                          "opacity": 1,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "$lcd-green",
+                            "blur": 16,
+                            "spread": 1
+                          }
+                        },
+                        "OJKbr": {
+                          "fill": "$lcd-green",
+                          "opacity": 1,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "$lcd-green",
+                            "blur": 16,
+                            "spread": 1
+                          }
+                        },
+                        "kMEEU": {
+                          "fill": "$lcd-green",
+                          "opacity": 1,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "$lcd-green",
+                            "blur": 16,
+                            "spread": 1
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "id": "WKzTS",
+                      "type": "ref",
+                      "ref": "b2dqML",
+                      "name": "Operator (-)",
+                      "width": 80,
+                      "height": 160,
+                      "descendants": {
+                        "IROzG": {
+                          "fill": "$lcd-green",
+                          "opacity": 1,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "$lcd-green",
+                            "blur": 16,
+                            "spread": 1
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "id": "Nu8R4",
+                      "type": "ref",
+                      "ref": "yAjSx",
+                      "name": "Right Digit (1)",
+                      "width": 88,
+                      "height": 160,
+                      "descendants": {
+                        "TfllU": {
+                          "fill": "$lcd-green",
+                          "opacity": 1,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "$lcd-green",
+                            "blur": 16,
+                            "spread": 1
+                          }
+                        },
+                        "OJKbr": {
+                          "fill": "$lcd-green",
+                          "opacity": 1,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "$lcd-green",
+                            "blur": 16,
+                            "spread": 1
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "r8Bf1T",
+                      "name": "Equals",
+                      "width": 88,
+                      "height": 160,
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "id": "x6NzO",
+                          "x": 8,
+                          "y": 56,
+                          "name": "bar-top",
+                          "fill": "$lcd-green",
+                          "width": 72,
+                          "height": 12,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "$lcd-green",
+                            "blur": 16,
+                            "spread": 1
+                          }
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "VrLeU",
+                          "x": 8,
+                          "y": 92,
+                          "name": "bar-bottom",
+                          "fill": "$lcd-green",
+                          "width": 72,
+                          "height": 12,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "$lcd-green",
+                            "blur": 16,
+                            "spread": 1
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Uqawo",
+                      "type": "ref",
+                      "ref": "yAjSx",
+                      "name": "Result Digit (8)",
+                      "width": 88,
+                      "height": 160,
+                      "descendants": {
+                        "OUrUO": {
+                          "fill": "$lcd-green",
+                          "opacity": 1,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "$lcd-green",
+                            "blur": 16,
+                            "spread": 1
+                          }
+                        },
+                        "D4O79q": {
+                          "fill": "$lcd-green",
+                          "opacity": 1,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "$lcd-green",
+                            "blur": 16,
+                            "spread": 1
+                          }
+                        },
+                        "TfllU": {
+                          "fill": "$lcd-green",
+                          "opacity": 1,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "$lcd-green",
+                            "blur": 16,
+                            "spread": 1
+                          }
+                        },
+                        "IifVP": {
+                          "fill": "$lcd-green",
+                          "opacity": 1,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "$lcd-green",
+                            "blur": 16,
+                            "spread": 1
+                          }
+                        },
+                        "A27BY3": {
+                          "fill": "$lcd-green",
+                          "opacity": 1,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "$lcd-green",
+                            "blur": 16,
+                            "spread": 1
+                          }
+                        },
+                        "OJKbr": {
+                          "fill": "$lcd-green",
+                          "opacity": 1,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "$lcd-green",
+                            "blur": 16,
+                            "spread": 1
+                          }
+                        },
+                        "kMEEU": {
+                          "fill": "$lcd-green",
+                          "opacity": 1,
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "$lcd-green",
+                            "blur": 16,
+                            "spread": 1
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "hBfsP",
+              "name": "Control Strip",
+              "width": "fill_container",
+              "padding": [
+                22,
+                0,
+                4,
+                0
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "H6IWh",
+                  "name": "Reset Control",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "nNNb0",
+                      "name": "Reset Button",
+                      "width": 92,
+                      "height": 92,
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "radial",
+                        "enabled": true,
+                        "rotation": 0,
+                        "size": {
+                          "width": 1.3,
+                          "height": 1.3
+                        },
+                        "colors": [
+                          {
+                            "color": "$button-red",
+                            "position": 0
+                          },
+                          {
+                            "color": "$button-red-dark",
+                            "position": 1
+                          }
+                        ],
+                        "center": {
+                          "x": 0.35,
+                          "y": 0.3
+                        }
+                      },
+                      "cornerRadius": 46,
+                      "stroke": "$metal-grey",
+                      "strokeWidth": 5,
+                      "strokeAlignment": "inner",
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#00000066",
+                        "offset": {
+                          "x": 0,
+                          "y": 6
+                        },
+                        "blur": 10
+                      },
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "A8U4t",
+                          "x": 18,
+                          "y": 14,
+                          "name": "Shine",
+                          "fill": "#FFFFFF59",
+                          "width": 32,
+                          "height": 18
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "UgGtq",
+                      "name": "Reset Label",
+                      "fill": "#dcdcdc",
+                      "content": "RESET",
+                      "fontFamily": "$font-arcade",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "yAjSx",
+      "x": 0,
+      "y": -240,
+      "name": "Digit",
+      "reusable": true,
+      "width": 88,
+      "height": 160,
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "OUrUO",
+          "x": 8,
+          "y": 0,
+          "name": "top",
+          "opacity": 0.5,
+          "fill": "$lcd-dim",
+          "width": 72,
+          "height": 12
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "D4O79q",
+          "x": 0,
+          "y": 12,
+          "name": "topLeft",
+          "opacity": 0.5,
+          "fill": "$lcd-dim",
+          "width": 12,
+          "height": 64
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "TfllU",
+          "x": 76,
+          "y": 12,
+          "name": "topRight",
+          "opacity": 0.5,
+          "fill": "$lcd-dim",
+          "width": 12,
+          "height": 64
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "IifVP",
+          "x": 8,
+          "y": 74,
+          "name": "middle",
+          "opacity": 0.5,
+          "fill": "$lcd-dim",
+          "width": 72,
+          "height": 12
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "A27BY3",
+          "x": 0,
+          "y": 84,
+          "name": "bottomLeft",
+          "opacity": 0.5,
+          "fill": "$lcd-dim",
+          "width": 12,
+          "height": 64
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "OJKbr",
+          "x": 76,
+          "y": 84,
+          "name": "bottomRight",
+          "opacity": 0.5,
+          "fill": "$lcd-dim",
+          "width": 12,
+          "height": 64
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "kMEEU",
+          "x": 8,
+          "y": 148,
+          "name": "bottom",
+          "opacity": 0.5,
+          "fill": "$lcd-dim",
+          "width": 72,
+          "height": 12
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "b2dqML",
+      "x": 128,
+      "y": -240,
+      "name": "Operator",
+      "reusable": true,
+      "width": 80,
+      "height": 160,
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "IROzG",
+          "x": 4,
+          "y": 74,
+          "name": "horizontal",
+          "opacity": 0.5,
+          "fill": "$lcd-dim",
+          "width": 72,
+          "height": 12
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 3,
+          "id": "myg0b",
+          "x": 34,
+          "y": 48,
+          "name": "vertical",
+          "opacity": 0.5,
+          "fill": "$lcd-dim",
+          "width": 12,
+          "height": 64
+        }
+      ]
     }
   ],
+  "variables": {
+    "cabinet-purple": {
+      "type": "color",
+      "value": "#3a1957"
+    },
+    "cabinet-purple-dark": {
+      "type": "color",
+      "value": "#1c0a2b"
+    },
+    "neon-cyan": {
+      "type": "color",
+      "value": "#00e5ff"
+    },
+    "neon-magenta": {
+      "type": "color",
+      "value": "#ff2fb0"
+    },
+    "bezel-black": {
+      "type": "color",
+      "value": "#0d0d0d"
+    },
+    "screen-bg": {
+      "type": "color",
+      "value": "#05130a"
+    },
+    "lcd-green": {
+      "type": "color",
+      "value": "#39ff6a"
+    },
+    "lcd-dim": {
+      "type": "color",
+      "value": "#123320"
+    },
+    "metal-grey": {
+      "type": "color",
+      "value": "#4a4a4a"
+    },
+    "metal-grey-dark": {
+      "type": "color",
+      "value": "#2c2c2c"
+    },
+    "button-red": {
+      "type": "color",
+      "value": "#e8232a"
+    },
+    "button-red-dark": {
+      "type": "color",
+      "value": "#8f0f18"
+    },
+    "font-arcade": {
+      "type": "string",
+      "value": "Press Start 2P"
+    }
+  },
   "fileToken": "2117d40e-f04c-462c-a718-cd24d367f2c9"
 }
