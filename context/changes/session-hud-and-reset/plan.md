@@ -217,13 +217,13 @@ None — new, additive UI state with no existing data to migrate.
 
 #### Automated
 
-- [x] 2.1 Unit tests pass: `npm run test`
-- [x] 2.2 Type check passes: `npm run build`
-- [x] 2.3 Lint passes: `npm run lint`
+- [x] 2.1 Unit tests pass: `npm run test` — 02fdcb9
+- [x] 2.2 Type check passes: `npm run build` — 02fdcb9
+- [x] 2.3 Lint passes: `npm run lint` — 02fdcb9
 
 #### Manual
 
-- [x] 2.4 Clicking Reset restores the belka/segment layout to the puzzle's original position
-- [x] 2.5 Clicking Reset zeroes the moves counter and elapsed time for the current equation
-- [x] 2.6 Score is unaffected by Reset
-- [x] 2.7 Reset button is disabled and inert during the ~1s reward-celebration window after solving an equation
+- [x] 2.4 Clicking Reset restores the belka/segment layout to the puzzle's original position — 02fdcb9
+- [x] 2.5 Clicking Reset zeroes the moves counter and elapsed time for the current equation — 02fdcb9
+- [x] 2.6 Score is unaffected by Reset — 02fdcb9
+- [x] 2.7 Reset button is disabled and inert during the ~1s reward-celebration window after solving an equation — 02fdcb9
