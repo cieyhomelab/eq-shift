@@ -2,14 +2,15 @@ type SegmentProps = {
   slot: string
   lit: boolean
   selected: boolean
+  animating: boolean
   onClick: () => void
 }
 
-export function Segment({ slot, lit, selected, onClick }: SegmentProps) {
+export function Segment({ slot, lit, selected, animating, onClick }: SegmentProps) {
   const className = [
     'segment',
     `slot-${slot}`,
-    lit ? 'segment--lit' : 'segment--unlit',
+    animating ? 'segment--boot' : lit ? 'segment--lit' : 'segment--unlit',
     selected ? 'segment--selected' : '',
   ]
     .filter(Boolean)
@@ -20,8 +21,9 @@ export function Segment({ slot, lit, selected, onClick }: SegmentProps) {
       type="button"
       className={className}
       onClick={onClick}
+      disabled={animating}
       aria-pressed={selected}
-      aria-label={`${lit ? 'lit' : 'unlit'} segment`}
+      aria-label={animating ? 'segment initializing' : `${lit ? 'lit' : 'unlit'} segment`}
     />
   )
 }

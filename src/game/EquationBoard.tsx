@@ -1,8 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { CellKey, EquationState, SlotRef } from './equation'
 import type { DigitSlot, OperatorSlot } from './segments'
 import { Segment } from './Segment'
+import { playBootSequence, playSegmentClick } from './sound'
 import './game.css'
+
+const INTRO_ANIMATION_MS = 2500
 
 const DIGIT_SLOTS: readonly DigitSlot[] = [
   'top',
@@ -22,17 +25,31 @@ type EquationBoardProps = {
   state: EquationState
   onMove: (from: SlotRef, to: SlotRef) => void
   disabled?: boolean
+  puzzleIndex: number
 }
 
-export function EquationBoard({ state, onMove, disabled = false }: EquationBoardProps) {
+export function EquationBoard({ state, onMove, disabled = false, puzzleIndex }: EquationBoardProps) {
   const [selected, setSelected] = useState<SlotRef | null>(null)
+  const [introActive, setIntroActive] = useState(true)
+
+  useEffect(() => {
+    setIntroActive(true)
+    setSelected(null)
+    const stopBoot = playBootSequence(INTRO_ANIMATION_MS)
+    const timeoutId = window.setTimeout(() => setIntroActive(false), INTRO_ANIMATION_MS)
+    return () => {
+      window.clearTimeout(timeoutId)
+      stopBoot()
+    }
+  }, [puzzleIndex])
 
   function isSelected(cell: CellKey, slot: DigitSlot | OperatorSlot) {
     return selected !== null && selected.cell === cell && selected.slot === slot
   }
 
   function handleSlotClick(ref: SlotRef, lit: boolean) {
-    if (disabled) return
+    if (disabled || introActive) return
+    playSegmentClick()
     if (lit) {
       setSelected((current) =>
         current && current.cell === ref.cell && current.slot === ref.slot ? null : ref,
@@ -54,6 +71,7 @@ export function EquationBoard({ state, onMove, disabled = false }: EquationBoard
             slot={slot}
             lit={state[cell].has(slot)}
             selected={isSelected(cell, slot)}
+            animating={introActive}
             onClick={() => handleSlotClick({ cell, slot }, state[cell].has(slot))}
           />
         ))}
@@ -71,6 +89,7 @@ export function EquationBoard({ state, onMove, disabled = false }: EquationBoard
             slot={slot}
             lit={state.operator.has(slot)}
             selected={isSelected('operator', slot)}
+            animating={introActive}
             onClick={() =>
               handleSlotClick({ cell: 'operator', slot }, state.operator.has(slot))
             }

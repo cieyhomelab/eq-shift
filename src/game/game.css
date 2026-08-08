@@ -94,6 +94,83 @@
   outline-offset: 2px;
 }
 
+.segment--boot {
+  cursor: default;
+  animation: segment-flicker 900ms steps(1, end) infinite;
+}
+
+.slot-top.segment--boot {
+  animation-delay: 0ms;
+}
+.slot-topLeft.segment--boot,
+.slot-topRight.segment--boot {
+  animation-delay: 90ms;
+}
+.slot-middle.segment--boot {
+  animation-delay: 180ms;
+}
+.slot-bottomLeft.segment--boot,
+.slot-bottomRight.segment--boot {
+  animation-delay: 270ms;
+}
+.slot-bottom.segment--boot {
+  animation-delay: 360ms;
+}
+.slot-horizontal.segment--boot {
+  animation-delay: 60ms;
+}
+.slot-vertical.segment--boot {
+  animation-delay: 150ms;
+}
+
+@keyframes segment-flicker {
+  0% {
+    background: #123320;
+    box-shadow: none;
+    opacity: 0.4;
+  }
+  10% {
+    background: #39ff6a;
+    box-shadow: 0 0 16px #39ff6a;
+    opacity: 1;
+  }
+  20% {
+    background: #123320;
+    box-shadow: none;
+    opacity: 0.5;
+  }
+  35% {
+    background: #39ff6a;
+    box-shadow: 0 0 16px #39ff6a;
+    opacity: 1;
+  }
+  45% {
+    background: #123320;
+    box-shadow: none;
+    opacity: 0.4;
+  }
+  60% {
+    background: #39ff6a;
+    box-shadow: 0 0 12px #39ff6a;
+    opacity: 0.9;
+  }
+  70% {
+    background: #123320;
+    box-shadow: none;
+    opacity: 0.5;
+  }
+  85% {
+    background: #39ff6a;
+    box-shadow: 0 0 16px #39ff6a;
+    opacity: 1;
+  }
+  100% {
+    background: #123320;
+    box-shadow: none;
+    opacity: 0.4;
+  }
+}
+
 /* Digit slot positions (7-segment) */
 .slot-top,
 .slot-middle,

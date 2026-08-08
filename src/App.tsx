@@ -6,6 +6,7 @@ import { SessionHud } from './game/SessionHud'
 import { applyMove, isEquationTrue } from './game/equation'
 import type { EquationState, SlotRef } from './game/equation'
 import { puzzles } from './game/puzzles'
+import { playFanfare } from './game/sound'
 import './App.css'
 
 const SOLVED_ADVANCE_DELAY_MS = 1000
@@ -36,6 +37,7 @@ function App() {
     if (isEquationTrue(next)) {
       setSolved(true)
       setScore((s) => s + 1)
+      playFanfare()
       window.setTimeout(() => {
         const nextIndex = (puzzleIndex + 1) % puzzles.length
         setPuzzleIndex(nextIndex)
@@ -62,7 +64,12 @@ function App() {
         <div className="arcade-bezel">
           <div className="arcade-screen">
             <SessionHud score={score} moves={moves} elapsedSeconds={elapsedSeconds} />
-            <EquationBoard state={state} onMove={handleMove} disabled={solved} />
+            <EquationBoard
+              state={state}
+              onMove={handleMove}
+              disabled={solved}
+              puzzleIndex={puzzleIndex}
+            />
             <RewardBanner visible={solved} />
             <ResetControl onReset={handleReset} resetDisabled={solved} />
           </div>
