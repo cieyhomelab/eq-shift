@@ -201,17 +201,17 @@ None — new, additive UI state with no existing data to migrate.
 
 #### Automated
 
-- [ ] 1.1 Unit tests pass: `npm run test`
-- [ ] 1.2 Type check passes: `npm run build`
-- [ ] 1.3 Lint passes: `npm run lint`
+- [x] 1.1 Unit tests pass: `npm run test`
+- [x] 1.2 Type check passes: `npm run build`
+- [x] 1.3 Lint passes: `npm run lint`
 
 #### Manual
 
-- [ ] 1.4 Score starts at 0 and increments by exactly 1 each time an equation is solved, across multiple puzzles in a row
-- [ ] 1.5 Moves counter increments on every move attempt on the current equation, whether or not the resulting equation is correct
-- [ ] 1.6 Elapsed time visibly ticks once per second while playing
-- [ ] 1.7 Moves and elapsed time freeze at their final values during the ~1s reward-celebration window, then both reset to 0 the moment the next equation appears
-- [ ] 1.8 HUD readouts are legible and match the existing retro-green visual style
+- [x] 1.4 Score starts at 0 and increments by exactly 1 each time an equation is solved, across multiple puzzles in a row
+- [x] 1.5 Moves counter increments on every move attempt on the current equation, whether or not the resulting equation is correct
+- [x] 1.6 Elapsed time visibly ticks once per second while playing
+- [x] 1.7 Moves and elapsed time freeze at their final values during the ~1s reward-celebration window, then both reset to 0 the moment the next equation appears
+- [x] 1.8 HUD readouts are legible and match the existing retro-green visual style
 
 ### Phase 2: Reset action
 

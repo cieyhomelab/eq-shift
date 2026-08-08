@@ -120,3 +120,35 @@
   color: #39ff6a;
   text-shadow: 0 0 8px #39ff6a;
 }
+
+.session-hud {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 16px;
+  padding: 12px 24px;
+  background: #05130a;
+  border-radius: 8px;
+}
+
+.session-hud-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.session-hud-label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #39ff6a;
+  opacity: 0.6;
+}
+
+.session-hud-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #39ff6a;
+  text-shadow: 0 0 6px #39ff6a;
+}
