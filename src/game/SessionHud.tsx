@@ -4,11 +4,9 @@ type SessionHudProps = {
   score: number
   moves: number
   elapsedSeconds: number
-  onReset: () => void
-  resetDisabled: boolean
 }
 
-export function SessionHud({ score, moves, elapsedSeconds, onReset, resetDisabled }: SessionHudProps) {
+export function SessionHud({ score, moves, elapsedSeconds }: SessionHudProps) {
   return (
     <div className="session-hud">
       <div className="session-hud-stat">
@@ -23,9 +21,6 @@ export function SessionHud({ score, moves, elapsedSeconds, onReset, resetDisable
         <span className="session-hud-label">Time</span>
         <span className="session-hud-value">{formatElapsed(elapsedSeconds)}</span>
       </div>
-      <button className="session-hud-reset" onClick={onReset} disabled={resetDisabled}>
-        Reset
-      </button>
     </div>
   )
 }

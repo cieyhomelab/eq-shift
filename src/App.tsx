@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { EquationBoard } from './game/EquationBoard'
+import { ResetControl } from './game/ResetControl'
 import { RewardBanner } from './game/RewardBanner'
 import { SessionHud } from './game/SessionHud'
 import { applyMove, isEquationTrue } from './game/equation'
@@ -54,15 +55,19 @@ function App() {
 
   return (
     <main className="app">
-      <SessionHud
-        score={score}
-        moves={moves}
-        elapsedSeconds={elapsedSeconds}
-        onReset={handleReset}
-        resetDisabled={solved}
-      />
-      <EquationBoard state={state} onMove={handleMove} disabled={solved} />
-      <RewardBanner visible={solved} />
+      <div className="arcade-cabinet">
+        <div className="arcade-marquee">
+          <p className="arcade-logo">EQ.SHIFT</p>
+        </div>
+        <div className="arcade-bezel">
+          <div className="arcade-screen">
+            <SessionHud score={score} moves={moves} elapsedSeconds={elapsedSeconds} />
+            <EquationBoard state={state} onMove={handleMove} disabled={solved} />
+            <RewardBanner visible={solved} />
+            <ResetControl onReset={handleReset} resetDisabled={solved} />
+          </div>
+        </div>
+      </div>
     </main>
   )
 }
