@@ -18,6 +18,7 @@ function App() {
   const [score, setScore] = useState(0)
   const [moves, setMoves] = useState(0)
   const [elapsedSeconds, setElapsedSeconds] = useState(0)
+  const [hintActive, setHintActive] = useState(false)
 
   useEffect(() => {
     if (solved) return
@@ -28,6 +29,21 @@ function App() {
 
     return () => window.clearInterval(intervalId)
   }, [solved])
+
+  useEffect(() => {
+    setHintActive(false)
+  }, [puzzleIndex])
+
+  useEffect(() => {
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key.toLowerCase() === 's') {
+        setHintActive((active) => !active)
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [])
 
   function handleMove(from: SlotRef, to: SlotRef) {
     const next = applyMove(state, from, to)
@@ -69,6 +85,8 @@ function App() {
               onMove={handleMove}
               disabled={solved}
               puzzleIndex={puzzleIndex}
+              hintActive={hintActive}
+              hintMove={puzzles[puzzleIndex].solvingMove}
             />
             <RewardBanner visible={solved} />
             <ResetControl onReset={handleReset} resetDisabled={solved} />

@@ -26,9 +26,18 @@ type EquationBoardProps = {
   onMove: (from: SlotRef, to: SlotRef) => void
   disabled?: boolean
   puzzleIndex: number
+  hintActive?: boolean
+  hintMove: { from: SlotRef; to: SlotRef }
 }
 
-export function EquationBoard({ state, onMove, disabled = false, puzzleIndex }: EquationBoardProps) {
+export function EquationBoard({
+  state,
+  onMove,
+  disabled = false,
+  puzzleIndex,
+  hintActive = false,
+  hintMove,
+}: EquationBoardProps) {
   const [selected, setSelected] = useState<SlotRef | null>(null)
   const [introActive, setIntroActive] = useState(true)
 
@@ -45,6 +54,14 @@ export function EquationBoard({ state, onMove, disabled = false, puzzleIndex }: 
 
   function isSelected(cell: CellKey, slot: DigitSlot | OperatorSlot) {
     return selected !== null && selected.cell === cell && selected.slot === slot
+  }
+
+  function isHintSource(cell: CellKey, slot: DigitSlot | OperatorSlot) {
+    return hintActive && hintMove.from.cell === cell && hintMove.from.slot === slot
+  }
+
+  function isHintTarget(cell: CellKey, slot: DigitSlot | OperatorSlot) {
+    return hintActive && hintMove.to.cell === cell && hintMove.to.slot === slot
   }
 
   function handleSlotClick(ref: SlotRef, lit: boolean) {
@@ -71,6 +88,8 @@ export function EquationBoard({ state, onMove, disabled = false, puzzleIndex }: 
             slot={slot}
             lit={state[cell].has(slot)}
             selected={isSelected(cell, slot)}
+            hintSource={isHintSource(cell, slot)}
+            hintTarget={isHintTarget(cell, slot)}
             animating={introActive}
             onClick={() => handleSlotClick({ cell, slot }, state[cell].has(slot))}
           />
@@ -89,6 +108,8 @@ export function EquationBoard({ state, onMove, disabled = false, puzzleIndex }: 
             slot={slot}
             lit={state.operator.has(slot)}
             selected={isSelected('operator', slot)}
+            hintSource={isHintSource('operator', slot)}
+            hintTarget={isHintTarget('operator', slot)}
             animating={introActive}
             onClick={() =>
               handleSlotClick({ cell: 'operator', slot }, state.operator.has(slot))
