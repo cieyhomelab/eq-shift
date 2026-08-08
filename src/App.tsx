@@ -46,9 +46,21 @@ function App() {
     }
   }
 
+  function handleReset() {
+    setState(puzzles[puzzleIndex].initial)
+    setMoves(0)
+    setElapsedSeconds(0)
+  }
+
   return (
     <main className="app">
-      <SessionHud score={score} moves={moves} elapsedSeconds={elapsedSeconds} />
+      <SessionHud
+        score={score}
+        moves={moves}
+        elapsedSeconds={elapsedSeconds}
+        onReset={handleReset}
+        resetDisabled={solved}
+      />
       <EquationBoard state={state} onMove={handleMove} disabled={solved} />
       <RewardBanner visible={solved} />
     </main>

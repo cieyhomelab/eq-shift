@@ -152,3 +152,24 @@
   color: #39ff6a;
   text-shadow: 0 0 6px #39ff6a;
 }
+
+.session-hud-reset {
+  align-self: center;
+  padding: 8px 16px;
+  background: #123320;
+  color: #39ff6a;
+  border: 1px solid #39ff6a;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+
+.session-hud-reset:disabled {
+  opacity: 0.4;
+  border-color: #123320;
+  color: #123320;
+  cursor: default;
+}
