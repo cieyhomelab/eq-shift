@@ -94,6 +94,29 @@
   outline-offset: 2px;
 }
 
+.segment--hint-source {
+  outline: 3px solid #00e5ff;
+  outline-offset: 2px;
+  animation: hint-pulse 900ms ease-in-out infinite;
+}
+
+.segment--hint-target {
+  outline: 3px dashed #00e5ff;
+  outline-offset: 2px;
+  background: rgba(0, 229, 255, 0.25);
+  animation: hint-pulse 900ms ease-in-out infinite;
+}
+
+@keyframes hint-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 8px #00e5ff;
+  }
+  50% {
+    box-shadow: 0 0 22px #00e5ff;
+  }
+}
+
 .segment--boot {
   cursor: default;
   animation: segment-flicker 900ms steps(1, end) infinite;
